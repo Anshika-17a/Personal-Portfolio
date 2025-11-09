@@ -1,0 +1,161 @@
+/* ===== Color Themes ===== */
+:root {
+  --bg-color: #f6f8fa;
+  --text-color: #24292f;
+  --accent-color: #007bff;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg-color: #0d1117;
+  --text-color: #e6edf3;
+  --accent-color: #58a6ff;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* ===== Navbar ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 100;
+  transition: background 0.6s ease;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--accent-color);
+}
+
+.nav-right a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-right a:hover {
+  color: var(--accent-color);
+}
+
+/* Theme Button */
+.theme-btn {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4% 8%;
+  flex-wrap: wrap;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 0.3em;
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.hero-intro {
+  margin-top: 0.8rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.socials a {
+  margin-right: 15px;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+/* ===== Glass Sections ===== */
+.glass {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 85%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* ===== Cards ===== */
+.skill-card, .hobby-card, .project-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+.skill-card:hover, .hobby-card:hover, .project-card:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* ===== Animations ===== */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
